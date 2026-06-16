@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomly - Цветочный магазин</title>
+    <link rel="stylesheet" href="./style-главная.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="./Главная сайта.html">Bloomly</a>
+            </div>
+            
+            <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="search-item">
+                    <input type="text" class="mobile-search" placeholder="Поиск...">
+                </li>
+                <li><a href="./Каталог.html">Каталог</a></li>
+                <li><a href="./Контакты.html">Контакты</a></li>
+                <!-- Ссылка на вход в мобильном меню -->
+                <li><a href="./регистрация.html" >Войти</a></li>
+                <li><a href="./reviews.html" >Отзывы</a></li>
+                <li class="mobile-cart-item">
+                    <button class="cart-trigger" id="cartTriggerMobile" aria-label="Корзина">
+                        Корзина <span class="cart-count" id="cartCountMobile">0</span>
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="nav-right desktop-nav">
+                <div class="search"><input type="text" placeholder="Поиск"></div>
+                <a href="./Каталог.html">Каталог</a>
+                <a href="./Контакты.html">Контакты</a>
+                <a href="./reviews.html" >Отзывы</a>
+                <a href="./регистрация.html" > Войти</a>
+
+                <button class="cart-trigger" id="cartTrigger" aria-label="Корзина">
+                    Корзина <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="main-container">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active"><img src="./img/букет 3.png" alt="Новинка 1"></div>
+                    <div class="slide"><img src="./img/букет 1.png" alt="Новинка 2"></div>
+                    <div class="slide"><img src="./img/букет 2.png" alt="Новинка 3"></div>
+                </div>
+                <button class="slider-btn prev" onclick="changeSlide(-1)" aria-label="Предыдущий слайд">‹</button>
+                <button class="slider-btn next" onclick="changeSlide(1)" aria-label="Следующий слайд">›</button>
+            </div>
+
+            <div class="hero-text">
+                <p class="hero-title">Bloomly</p>
+                <p class="hero-tagline">Цветы. С любовью. Без лишнего.</p>
+                <a href="./Каталог.html" class="btn-catalog">Открыть каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="books-section">
+        <div class="books-container">
+            <h2 class="section-title">Популярные товары</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                    <img src="./img/букет роз.png" alt="Розы" class="book-cover">
+                    <h3 class="book-title">Розы</h3>
+                    <div class="price"><div class="price1">Стоимость: 4 500р</div></div>
+                    <button class="btn-cart">В корзину</button>
+                    <div class="book-links"><a href="./Каталог.html">Смотреть больше</a></div>
+                </div>
+                <div class="book-card">
+                    <img src="./img/букет альстромерий.png" alt="Альстромерии" class="book-cover">
+                    <h3 class="book-title">Альстромерии</h3>
+                    <div class="price"><div class="price1">Стоимость: 3 000р</div></div>
+                    <button class="btn-cart">В корзину</button>
+                    <div class="book-links"><a href="./Каталог.html">Смотреть больше</a></div>
+                </div>
+                <div class="book-card">
+                    <img src="./img/букет пионов.png" alt="Пионы" class="book-cover">
+                    <h3 class="book-title">Пионы</h3>
+                    <div class="price"><div class="price1">Стоимость: 6 000р</div></div>
+                    <button class="btn-cart">В корзину</button>
+                    <div class="book-links"><a href="./Каталог.html">Смотреть больше</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <p><span class="current-year"></span> Bloomly. Учебный проект. Иванова.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal" id="cartModal" aria-hidden="true">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h3>Ваша корзина</h3>
+                <button class="cart-close" id="cartClose" aria-label="Закрыть корзину">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="cart-empty">Корзина пуста</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Итого: <span id="cartTotal">0</span> ₽</div>
+                <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Java.js"></script>
+</body>
+</html>

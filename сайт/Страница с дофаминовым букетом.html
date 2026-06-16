@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с букетом</title>
+    <link rel="stylesheet" href="./style дофаминовым букетом.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bloomly</div>
+            
+            <button class="burger" id="burgerMenu" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="./Главная сайта.html">Главная</a></li>
+                <li><a href="./Каталог.html">Каталог</a></li>
+                <li><a href="./Контакты.html">Контакты</a></li>
+                <li>
+                    <button class="cart-trigger" id="openCartBtn" aria-label="Открыть корзину">
+                        Корзина <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Дофаминовый букет</h1>
+        
+       <div class="product-block">
+    <div class="product-image">
+        <img src="./img/дофаминовый букет.png" alt="Обложка" style="width: 100%; height: auto; display: block;">
+    </div>
+    
+    <div class="product-details">
+        <h2>Дофаминовый букет</h2>
+        <div class="product-author">Голландия, Индонезия, Эквадор</div>
+        <div class="product-price">4 000 ₽</div>
+        <p class="product-short-desc">
+            Этот букет — настоящая палитра весенней радости и свежести! Композиция собрана с особым вниманием к сочетанию оттенков и текстур, что делает её по-настоящему уникальной.
+        <div class="product-actions">
+            <button class="btn btn-cart" id="addToCart" data-id="1" data-title="Дофаминовый букет" data-price="4000">
+                Добавить в корзину
+            </button>
+            
+            
+        </div>
+    </div>
+</div>
+
+        <div class="tabs-section">
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="desc">Описание</button>
+                <button class="tab-btn" data-tab="specs">Характеристики</button>
+                <button class="tab-btn" data-tab="reviews">Отзывы</button>
+            </div>
+
+            <div id="desc" class="tab-panel active">
+                <h3 style="margin-bottom: 1rem; color: #2C1810;">О букете</h3>
+                <p style="margin-bottom: 1rem;">
+                  Правила по уходу :
+                    <br>
+                 Выберите подходящую вазу для цветов. Она должна быть чистой и достаточно большой, чтобы цветам не было тесно и можно было налить достаточное количество воды.
+                   <br>
+                 Налейте в вазу прохладную чистую воду. Добавьте в воду кризал (подкормку).
+                    <br>
+                Перед постановкой цветов в вазу необходимо: снять с букета упаковку, убрать все лишнее со стеблей (например остатки листьев), обновить срез у стеблей на 1-2 см под углом 45 градусов, поставить букет в подготовленную вазу.
+                   <br>
+                Для увеличения жизни букета менять воду и обновлять срез лучше каждый день.
+                  <br>
+                Позаботьтесь о подходящем месте для своего букета, помните, цветы не любят сквозняков, прямых солнечных лучей и отопительных приборов рядом.
+                  <br>
+            </div>
+
+            <div id="specs" class="tab-panel">
+                <table class="specs-table">
+                    <tr><th>Тип композиции</th><td>Букет</td></tr>
+                    <tr><th>Производство</th><td>Голландия, Индонезия, Эквадор</td></tr>
+                    <tr><th>Цветовая гамма</th><td>Розовые розы, оранжевые гвоздики, фиолетовые ирисы, зелёные гортензии и декоративные элементы.</td></tr>
+                    <tr><th>Символика</th><td>Выражает нежность, восхищение.</td></tr>
+                    <tr><th>Оформление</th><td>Этот букет упакован в прозрачную матовую пленку. Она придает букету элегантный и современный вид, сохраняя его естественную красоту.</td></tr>   
+                </table>
+            </div>
+
+            <div id="reviews" class="tab-panel">
+                <div class="review-card">
+                    <div class="review-header"><span class="review-author">Виктория Г.</span><span class="review-date">10.04.2026</span></div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Отличный букет! Очень красивые и свежие цветы, спасибо.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header"><span class="review-author">Никита Д.</span><span class="review-date">02.04.2026</span></div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Очень нежное оформление.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">Ольга С.</span>
+                        <span class="review-date">8 марта 2026</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Большое спасибо за прекрасные цветы! Заказала на 8 марта, цветочки пришли свежие-свежие.  Это восторг! </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>Корзина</h2>
+                <button class="cart-close" id="closeCartBtn">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="cart-empty">Корзина пуста</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Итого: <span id="cartTotal">0</span> ₽</div>
+                <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bloomly. Все права защищены.</p>
+    </footer>
+
+    <script src="./Java дофаминовый букет.js"></script>
+</body>
+</html>

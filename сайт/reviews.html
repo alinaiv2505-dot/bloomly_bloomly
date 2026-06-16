@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Bloomly</title>
+    <!-- Подключаем основные стили сайта -->
+    <link rel="stylesheet" href="./style-главная.css">
+    <!-- Подключаем стили специально для страницы отзывов -->
+    <link rel="stylesheet" href="./reviews.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (копия с главной) -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="./Главная сайта.html">Bloomly</a>
+            </div>
+            
+            <button class="burger" id="burgerBtn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="./Каталог.html">Каталог</a></li>
+                <li><a href="./Контакты.html">Контакты</a></li>
+                <li><a href="./reviews.html" style="color: #2C1810; font-weight: bold;">Отзывы</a></li>
+                <li><a href="./login.html">Войти</a></li>
+            </ul>
+            
+            <div class="nav-right desktop-nav">
+                <div class="search"><input type="text" placeholder="Поиск"></div>
+                <a href="./Каталог.html">Каталог</a>
+                <a href="./Контакты.html">Контакты</a>
+                <a href="./reviews.html" style="margin-left: 15px; color: #2C1810; text-decoration: none; font-weight: bold;">Отзывы</a>
+                <a href="./login.html" style="margin-left: 15px; color: #2C1810; text-decoration: none; font-weight: bold;">Войти</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="reviews-section">
+        <div class="reviews-container">
+            <h2 class="section-title">Отзывы наших клиентов</h2>
+
+            <!-- Список отзывов -->
+            <div class="review-list" id="reviewList">
+                
+                <!-- Отзыв 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">Елена Иванова</span>
+                        <span class="review-date">25.05.2025</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Заказывала букет пионов маме на день рождения. Доставили вовремя, цветы свежайшие! Упаковка очень нежная, как раз то, что я хотела. Спасибо Bloomly!</p>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">Дмитрий Петров</span>
+                        <span class="review-date">20.05.2025</span>
+                    </div>
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">Хороший сервис. Букет немного отличался от фото на сайте, но выглядел даже лучше. Курьер вежливый. Буду заказывать еще.</p>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">Анна Смирнова</span>
+                        <span class="review-date">15.05.2025</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Очень удобный сайт и быстрая доставка. Заказала розы в коробке, они стояли почти две недели! Рекомендую всем.</p>
+                </div>
+
+            </div>
+
+            <!-- Форма добавления отзыва -->
+            <div class="add-review-form">
+                <h3 class="form-title">Оставить отзыв</h3>
+                <form id="reviewForm" onsubmit="addReview(event)">
+                    
+                    <div class="form-group">
+                        <label for="reviewName">Ваше имя</label>
+                        <input type="text" id="reviewName" class="form-input" placeholder="Иван Иванов" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewEmail">Email</label>
+                        <input type="email" id="reviewEmail" class="form-input" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Оценка</label>
+                        <div class="rating-select" id="ratingStars">
+                            <span class="star-option" data-value="1">★</span>
+                            <span class="star-option" data-value="2">★</span>
+                            <span class="star-option" data-value="3">★</span>
+                            <span class="star-option" data-value="4">★</span>
+                            <span class="star-option active" data-value="5">★</span>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewText">Текст отзыва</label>
+                        <textarea id="reviewText" class="form-textarea" placeholder="Расскажите о вашем опыте..." required minlength="10"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Отправить отзыв</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <p><span class="current-year"></span> Bloomly. Учебный проект. Иванова.</p>
+            </div>
+        </div>
+    </footer>
+<script src="./reviews.js"></script>
+    <!-- Скрипт для работы формы отзывов -->
+    <script>
+        // Логика выбора звезд
+        const stars = document.querySelectorAll('.star-option');
+        const ratingInput = document.getElementById('ratingValue');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const value = star.getAttribute('data-value');
+                ratingInput.value = value;
+                
+                // Обновляем визуальное отображение
+                stars.forEach(s => {
+                    if (s.getAttribute('data-value') <= value) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Функция добавления отзыва
+        function addReview(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('reviewName').value;
+            const email = document.getElementById('reviewEmail').value;
+            const text = document.getElementById('reviewText').value;
+            const rating = document.getElementById('ratingValue').value;
+            
+            const date = new Date().toLocaleDateString('ru-RU');
+
+            let starsHtml = '';
+            for(let i=0; i<5; i++) {
+                starsHtml += i < rating ? '★' : '☆';
+            }
+
+            const newReview = document.createElement('div');
+            newReview.className = 'review-card';
+            newReview.innerHTML = `
+                <div class="review-header">
+                    <span class="review-author">${name}</span>
+                    <span class="review-date">${date}</span>
+                </div>
+                <div class="review-stars">${starsHtml}</div>
+                <p class="review-text">${text}</p>
+            `;
+
+            const reviewList = document.getElementById('reviewList');
+            reviewList.prepend(newReview);
+
+            document.getElementById('reviewForm').reset();
+            stars.forEach(s => s.classList.remove('active'));
+            stars[4].classList.add('active');
+            ratingInput.value = 5;
+
+            alert('Спасибо за ваш отзыв! Он успешно добавлен.');
+        }
+    </script>
+</body>
+</html>

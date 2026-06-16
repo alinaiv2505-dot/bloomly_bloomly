@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров — Bloomly</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+
+                <button class="burger" id="burgerBtn" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li class="search-item">
+                        <input type="text" class="mobile-search" placeholder="Поиск...">
+                    </li>
+                    <li><a href="./Главная сайта.html">Главная</a></li>
+                   
+                    <li><a href="./Контакты.html">Контакты</a></li>
+                    <li class="cart-wrapper">
+                        <a href="#" class="cart-link" id="cartTriggerMobile">
+                            <span class="cart-icon">Корзина</span>
+                            <span class="cart-count" id="cartCountMobile">0</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-right desktop-nav">
+                    <div class="search"><input type="text" placeholder="Поиск"></div>
+                    <a href="./Главная сайта.html">Главная</a>
+                
+                    <a href="./Контакты.html">Контакты</a>
+                    <button class="cart-trigger" id="cartTrigger" aria-label="Корзина">
+                        Корзина <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <h1>Каталог товаров</h1>
+
+        <aside>
+            <h3>Категории</h3>
+            <ul id="filters">
+                <li><a href="#" class="active" data-cat="all">Все цветы</a></li>
+                <li><a href="#" data-cat="classic">Монобукеты</a></li>
+                <li><a href="#" data-cat="fantasy">Букеты</a></li>
+                <li><a href="#" data-cat="detective">Дофаминовый букет</a></li>
+                <li><a href="#" data-cat="children">Цветы в горшках</a></li>
+            </ul>
+        </aside>
+
+        <main class="catalog-grid">
+            <article class="product-card" data-category="classic" data-id="1" data-title="Монобукет роз" data-price="5700" data-img="./css/img/монобукет роз.png">
+                <img src="./img/монобукет роз.png" alt="Обложка" class="card-img">
+                <div class="card-title">Монобукет роз</div>
+                <div class="card-author">Кения</div>
+                <div class="card-desc">Букет из 21 розовой розы</div>
+                <div class="card-price">5 700 ₽</div>
+                <div class="product-actions">
+                    <button class="btn-add">В корзину</button>
+                </div>
+                <div class="book-links"><a href="./Страница с монобукетом роз.html">Подробнее...</a></div>
+            </article>
+
+            <article class="product-card" data-category="fantasy" data-id="2" data-title="Букет эустом" data-price="6650" data-img="./css/img/эустома.png">
+                <img src="./img/эустома.png" alt="Обложка" class="card-img">
+                <div class="card-title">Букет эустом</div>
+                <div class="card-author">Россия</div>
+                <div class="card-desc">Нежный букет из 15 розовых эустом</div>
+                <div class="card-price">6 650 ₽</div>
+                <div class="product-actions">
+                    <button class="btn-add">В корзину</button>
+                </div>
+                <div class="book-links"><a href="./Страница с эустомой.html">Подробнее...</a></div>
+            </article>
+
+            <article class="product-card" data-category="detective" data-id="3" data-title="Дофаминовый букет" data-price="4000" data-img="./css/img/дофаминовый букет.png">
+                <img src="./img/дофаминовый букет.png" alt="Обложка" class="card-img">
+                <div class="card-title">Дофаминовый букет</div>
+                <div class="card-author">Голландия, Индонезия, Эквадор</div>
+                <div class="card-desc">Гортензии, гвоздики, розы, эустома</div>
+                <div class="card-price">4 000 ₽</div>
+                <div class="product-actions">
+                     <button class="btn-add">В корзину</button>
+                </div>
+                <div class="book-links"><a href="./Страница с дофаминовым букетом.html">Подробнее...</a></div>
+            </article>
+
+            <article class="product-card" data-category="classic" data-id="4" data-title="Монобукет альстромерий" data-price="4900" data-img="./css/img/монобукет альстромерий.png">
+                <img src="./img/монобукет альстромерий.png" alt="Обложка" class="card-img">
+                <div class="card-title">Монобукет альстромерий</div>
+                <div class="card-author">Колумбия</div>
+                <div class="card-desc">Монобукет из 19 альстромерий</div>
+                <div class="card-price">4 900 ₽</div>
+                <div class="product-actions">
+                    <button class="btn-add">В корзину</button>
+                </div>
+               <div class="book-links"><a href="./Страница с монобукетом альстромерий.html">Подробнее...</a></div>
+            </article>
+
+            <article class="product-card" data-category="children" data-id="5" data-title="Гиацинт" data-price="3315" data-img="./css/img/Гиацинт.png">
+                <img src="./img/Гиацинт.png" alt="Обложка" class="card-img">
+                <div class="card-title">Гиацинт</div>
+                <div class="card-author">Голландия</div>
+                <div class="card-desc">Гиацинтовый садик из трех гианцинтов</div>
+                <div class="card-price">3 315 ₽</div>
+                <div class="product-actions">
+                    <button class="btn-add">В корзину</button>
+                </div>
+                <div class="book-links"><a href="./Страница с гиацинтом.html">Подробнее...</a></div>
+            </article>
+
+             <article class="product-card" data-category="children" data-id="5" data-title="Орхидея" data-price="3500" data-img="./css/img/орхидея.png">
+                <img src="./img/pirate picotee.png" alt="Обложка" class="card-img">
+                <div class="card-title">Орхидея</div>
+                <div class="card-author">Нидерланды</div>
+                <div class="card-desc">Орхидея Picotee</div>
+                <div class="card-price">3 500 ₽</div>
+                <div class="product-actions">
+                    <button class="btn-add">В корзину</button>
+                </div>
+                <div class="book-links"><a href="./Страница с орхидеей.html">Подробнее...</a></div>
+            </article>
+
+            <article class="product-card" data-category="fantasy" data-id="6" data-title="Хризантемы с гипсофилами" data-price="1800" data-img="./css/img/хризантемы и гипсофилы.png">
+                <img src="./img/хризантемы и гипсофилы.png" alt="Обложка" class="card-img">
+                <div class="card-title">Хризантемы с гипсофилами</div>
+                <div class="card-author">России</div>
+                <div class="card-desc">Голубая лагуна</div>
+                <div class="card-price">1 800 ₽</div>
+                <div class="product-actions">
+                    <button class="btn-add">В корзину</button>
+                </div>
+                <div class="book-links"><a href="./Страница с хризантемами.html">Подробнее...</a></div>
+            </article>
+            
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <p>2026 Bloomly. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Ваша корзина</h2>
+                <button class="close-cart" id="cartCloseBtn">✕</button>
+            </div>
+            <div class="cart-items" id="cartItemsList">
+                <p style="text-align:center; color:#888; margin-top:20px;">Корзина пуста</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Итого: <span id="cartTotal">0</span> ₽</div>
+                <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Java2.js"></script>
+</body>
+</html>

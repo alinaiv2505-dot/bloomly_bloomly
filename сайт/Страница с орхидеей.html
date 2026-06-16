@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с букетом</title>
+    <link rel="stylesheet" href="./style орхидея.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bloomly</div>
+            
+            <button class="burger" id="burgerMenu" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="./Главная сайта.html">Главная</a></li>
+                <li><a href="./Каталог.html">Каталог</a></li>
+                <li><a href="./Контакты.html">Контакты</a></li>
+                <li>
+                    <button class="cart-trigger" id="openCartBtn" aria-label="Открыть корзину">
+                        Корзина <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Орхидея</h1>
+        
+       <div class="product-block">
+    <div class="product-image">
+        <img src="./img/pirate picotee.png" alt="Обложка" style="width: 100%; height: auto; display: block;">
+    </div>
+    
+    <div class="product-details">
+        <h2>Орхидея</h2>
+        <div class="product-author">Нидерланды</div>
+        <div class="product-price">3 500 ₽</div>
+        <p class="product-short-desc">
+            Орхидея Пират Пикоти — это изысканное растение, которое поражает своей нежной красотой. Её цветки имеют персиковый оттенок с розовыми переливами, а на лепестках часто встречаются тёмные разводы или крапинки, что придаёт им особую изысканность. Губа цветка ярко-малинового цвета, что создаёт контраст и делает цветок ещё более выразительным.
+        <div class="product-actions">
+            <button class="btn btn-cart" id="addToCart" data-id="1" data-title="Орхидея" data-price="3500">
+                Добавить в корзину
+            </button>
+            
+            
+        </div>
+    </div>
+</div>
+
+        <div class="tabs-section">
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="desc">Описание</button>
+                <button class="tab-btn" data-tab="specs">Характеристики</button>
+                <button class="tab-btn" data-tab="reviews">Отзывы</button>
+            </div>
+
+            <div id="desc" class="tab-panel active">
+                <h3 style="margin-bottom: 1rem; color: #2C1810;">О букете</h3>
+                <p style="margin-bottom: 1rem;">
+                  Уход:
+                    <br>
+                Освещение: Яркий, рассеянный свет (восток/запад). Прямые лучи вредны (выделение фиолетового пигмента). Зимой – яркое искусственное освещение.
+                   <br>
+                Температура: Днем 22–25°C, ночью 17–18°C. Зимой допустимо до 12–13°C.
+                   <br>
+                Влажность: 60–70%. Используйте увлажнитель, опрыскивание, емкость с водой, протирание листьев.
+                    <br>
+                Полив: Раз в 1–2 недели, не допуская пересыхания. Летом чаще. Избегайте застоя воды.
+                   <br>
+                Подкормка: Активный рост – раз в 2 недели, покой – раз в месяц. Используйте удобрения для фаленопсисов (половина дозы), под корень.
+                  <br>
+                Обрезка: Удаляйте увядшие листья и цветоносы стерильными инструментами.
+                  <br>
+            </div>
+
+            <div id="specs" class="tab-panel">
+                <table class="specs-table">
+                    <tr><th>Сорт</th><td>Фаленопсис</td></tr>
+                    <tr><th>Производство</th><td>Нидерланды</td></tr>
+                    <tr><th>Цветовая гамма</th><td> Её цветки имеют персиковый оттенок с розовыми переливами, а на лепестках часто встречаются тёмные разводы или крапинки, что придаёт им особую изысканность. Губа цветка ярко-малинового цвета, что создаёт контраст и делает цветок ещё более выразительным.</td></tr>
+                    <tr><th>Символика</th><td>Выражает изящество, красоту и невинность.</td></tr>
+                </table>
+            </div>
+
+            <div id="reviews" class="tab-panel">
+                <div class="review-card">
+                    <div class="review-header"><span class="review-author">Виктория Г.</span><span class="review-date">10.04.2026</span></div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Отличный букет! Очень красивые и свежие цветы, спасибо.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header"><span class="review-author">Никита Д.</span><span class="review-date">02.04.2026</span></div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Очень нежное оформление.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">Ольга С.</span>
+                        <span class="review-date">8 марта 2026</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Большое спасибо за прекрасные цветы! Заказала на 8 марта, цветочки пришли свежие-свежие.  Это восторг! </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>Корзина</h2>
+                <button class="cart-close" id="closeCartBtn">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="cart-empty">Корзина пуста</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Итого: <span id="cartTotal">0</span> ₽</div>
+                <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bloomly. Все права защищены.</p>
+    </footer>
+
+    <script src="./Java орхидея.js"></script>
+</body>
+</html>

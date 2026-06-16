@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с букетом</title>
+    <link rel="stylesheet" href="./style роз.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bloomly</div>
+            
+            <button class="burger" id="burgerMenu" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="./Главная сайта.html">Главная</a></li>
+                <li><a href="./Каталог.html">Каталог</a></li>
+                <li><a href="./Контакты.html">Контакты</a></li>
+                <li>
+                    <button class="cart-trigger" id="openCartBtn" aria-label="Открыть корзину">
+                        Корзина <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Монобукет роз</h1>
+        
+       <div class="product-block">
+    <div class="product-image">
+        <img src="./img/монобукет роз.png" alt="Обложка" style="width: 100%; height: auto; display: block;">
+    </div>
+    
+    <div class="product-details">
+        <h2>Монобукет роз</h2>
+        <div class="product-author">Кения</div>
+        <div class="product-price">5 700 ₽</div>
+        <p class="product-short-desc">
+            Букет из роз сорта «Джумилия» (Jumilia). Этот сорт легко узнать по характерному двухцветному окрасу: основание лепестков имеет молочно-белый или кремовый оттенок, который плавно переходит в насыщенный ярко-розовый цвет по краям.
+        
+        <div class="product-actions">
+            <button class="btn btn-cart" id="addToCart" data-id="1" data-title="Монобукет роз" data-price="5700">
+                Добавить в корзину
+            </button>
+            
+            
+        </div>
+    </div>
+</div>
+
+        <div class="tabs-section">
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="desc">Описание</button>
+                <button class="tab-btn" data-tab="specs">Характеристики</button>
+                <button class="tab-btn" data-tab="reviews">Отзывы</button>
+            </div>
+
+            <div id="desc" class="tab-panel active">
+                <h3 style="margin-bottom: 1rem; color: #2C1810;">О букете</h3>
+                <p style="margin-bottom: 1rem;">
+                    Подготовка к постановке в вазу:
+                    <br>
+                 Срез: Косой, острым ножом/секатором. Можно расщепить конец.
+                   <br>
+                 Листья: Удалить нижние, чтобы не касались воды.
+                   <br>
+                 Вода: Наполнить вазу на ⅔. Прохладная (летом), теплая (зимой).
+                   <br>
+                </p>
+                <p>
+                   Уход за букетом:
+                     <br>
+                  Вода/срез: Менять ежедневно/через день, обновлять срез. Мыть вазу и стебли.
+                    <br>
+                  Ваза: Глубокая (⅔ стебля), керамическая/стеклянная (желательно затемненная).
+                    <br>
+                  Размещение: Вдали от фруктов, солнца, сквозняков, отопителей. Не утрамбовывать.
+                    <br>
+                </p>
+            </div>
+
+            <div id="specs" class="tab-panel">
+                <table class="specs-table">
+                    <tr><th>Тип композиции</th><td>Монобукет</td></tr>
+                    <tr><th>Сорт роз</th><td>«Джумилия» (Jumilia)</td></tr>
+                    <tr><th>Производство</th><td>Кения</td></tr>
+                    <tr><th>Цветовая гамма</th><td>ДвухцветнЫЙ окрас: основание лепестков имеет молочно-белый или кремовый оттенок, который плавно переходит в насыщенный ярко-розовый цвет по краям.</td></tr>
+                    <tr><th>Символика</th><td>Нежность, грация и искренняя симпатия</td></tr>
+                    <tr><th>Оформление</th><td>Композиция упакована в нежно-розовую матовую пленку с использованием розовой бумаги тишью, что создает дополнительный объем и подчеркивает красоту цветов.</td></tr>
+                    
+                </table>
+            </div>
+
+            <div id="reviews" class="tab-panel">
+                <div class="review-card">
+                    <div class="review-header"><span class="review-author">Анастасия Л.</span><span class="review-date">10.04.2026</span></div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Отличный букет! Очень красивые и свежие цветы, спасибо.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header"><span class="review-author">Елена Д.</span><span class="review-date">02.04.2026</span></div>
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">Очень нежное оформление. Рекомендую.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">Дмитрий С.</span>
+                        <span class="review-date">18.08.2026</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Всё на высшем уровне прошло. Оформление супер, свежий товар, доставка вовремя. Спасибо магазину!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>Корзина</h2>
+                <button class="cart-close" id="closeCartBtn">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="cart-empty">Корзина пуста</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Итого: <span id="cartTotal">0</span> ₽</div>
+                <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bloomly. Все права защищены.</p>
+    </footer>
+
+    <script src="./Java розы.js"></script>
+</body>
+</html>

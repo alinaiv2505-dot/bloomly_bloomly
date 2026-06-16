@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с букетом</title>
+    <link rel="stylesheet" href="./style эустома.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Bloomly</div>
+            
+            <button class="burger" id="burgerMenu" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="./Главная сайта.html">Главная</a></li>
+                <li><a href="./Каталог.html">Каталог</a></li>
+                <li><a href="./Контакты.html">Контакты</a></li>
+                <li>
+                    <button class="cart-trigger" id="openCartBtn" aria-label="Открыть корзину">
+                        Корзина <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Букет эустом</h1>
+        
+       <div class="product-block">
+    <div class="product-image">
+        <img src="./img/эустома.png" alt="Обложка" style="width: 100%; height: auto; display: block;">
+    </div>
+    
+    <div class="product-details">
+        <h2>Букет эустом</h2>
+        <div class="product-author">Россия</div>
+        <div class="product-price">6 650 ₽</div>
+        <p class="product-short-desc">
+            Этот прекрасный букет – воплощение свежести и красоты. Отборные цветы, гармонично собранные в единую композицию, создают неповторимую атмосферу и дарят ощущение радости. Идеальный подарок, чтобы выразить свои чувства и оставить незабываемое впечатление.
+        <div class="product-actions">
+            <button class="btn btn-cart" id="addToCart" data-id="1" data-title="Букет эустом" data-price="6650">
+                Добавить в корзину
+            </button>
+            
+            
+        </div>
+    </div>
+</div>
+
+        <div class="tabs-section">
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="desc">Описание</button>
+                <button class="tab-btn" data-tab="specs">Характеристики</button>
+                <button class="tab-btn" data-tab="reviews">Отзывы</button>
+            </div>
+
+            <div id="desc" class="tab-panel active">
+                <h3 style="margin-bottom: 1rem; color: #2C1810;">О букете</h3>
+                <p style="margin-bottom: 1rem;">
+                  Подготовка цветов к вазе:
+                    <br>
+                 Стебли: Обрежьте под углом 45° острым ножом/секатором для лучшего впитывания воды. Не используйте ножницы.
+                   <br>
+                 Листья: Удалите нижние листья, которые окажутся под водой, чтобы избежать гниения.
+                   <br>
+                 Ваза: Используйте чистую вазу (теплая вода с мылом, ополаскивание, высушивание). Стеклянные или керамические предпочтительнее.
+                    <br>
+                      </p>
+                       <p>
+                Вода и ваза:
+                   <br>
+                Вода: Чистая, отстоянная/фильтрованная, комнатной температуры. Можно кипяченую (охлажденную). Для жесткой воды добавьте щепотку лимонной кислоты.
+                  <br>
+                Объем вазы: На 1 стебель – минимум 0,5 л воды. Для крупных букетов – широкие вазы.
+                  <br>
+                Уровень воды: Стебли должны быть погружены на 10–15 см. Ежедневно доливайте воду.
+                  <br>
+                </p>
+                <br>
+                <p>
+                   Условия хранения:
+                     <br>
+                  Температура: 18–22 °C.
+                    <br>
+                  Освещение: Избегайте прямых солнечных лучей.
+                    <br>
+                 Влажность: Около 60%.
+                    <br>
+                   Прочее: Избегайте сквозняков и перепадов температуры.
+                    <br>
+                    </p>
+            </div>
+
+            <div id="specs" class="tab-panel">
+                <table class="specs-table">
+                    <tr><th>Тип композиции</th><td>Букет</td></tr>
+                    <tr><th>Сорт альстромерий</th><td>«Автора»</td></tr>
+                    <tr><th>Производство</th><td>Россия</td></tr>
+                    <tr><th>Цветовая гамма</th><td>Большие нежно-розовые цветы 5–7 см чашеобразной формы с махровыми лепестками.</td></tr>
+                    <tr><th>Символика</th><td>Выражает нежность, восхищение, зарождающуюся привязанность.</td></tr>
+                    <tr><th>Оформление</th><td>Этот букет оформлен в нежно-розовую упаковку, которая подчеркивает романтичность и утонченность розовых эустом.</td></tr>   
+                </table>
+            </div>
+
+            <div id="reviews" class="tab-panel">
+                <div class="review-card">
+                    <div class="review-header"><span class="review-author">Виктория Г.</span><span class="review-date">10.04.2026</span></div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Отличный букет! Очень красивые и свежие цветы, спасибо.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header"><span class="review-author">Никита Д.</span><span class="review-date">02.04.2026</span></div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Очень нежное оформление.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-author">Ольга С.</span>
+                        <span class="review-date">8 марта 2026</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">Большое спасибо за прекрасные цветы! Заказала на 8 марта, цветочки пришли свежие-свежие.  Это восторг! </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>Корзина</h2>
+                <button class="cart-close" id="closeCartBtn">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="cart-empty">Корзина пуста</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">Итого: <span id="cartTotal">0</span> ₽</div>
+                <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Bloomly. Все права защищены.</p>
+    </footer>
+
+    <script src="./Java эустома.js"></script>
+</body>
+</html>
